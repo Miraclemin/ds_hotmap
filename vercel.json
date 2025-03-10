@@ -1,11 +1,15 @@
 {
-  "buildCommand": "next build",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
   "installCommand": "npm install",
-  "framework": "nextjs",
-  "outputDirectory": ".next",
-  "regions": ["sin1"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
   "env": {
-    "POSTGRES_PRISMA_URL": "env var from vercel ui",
-    "POSTGRES_URL_NON_POOLING": "env var from vercel ui"
+    "NODE_ENV": "production",
+    "DATABASE_URL": "your-database-url-here"
   }
 } 
