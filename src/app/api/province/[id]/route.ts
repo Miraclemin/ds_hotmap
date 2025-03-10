@@ -88,10 +88,10 @@ async function getProvinceDetailFromDB(provinceId: string): Promise<ProvinceData
 
 export async function GET(
   request: Request,
-  { params }: { params: { id: string } }
+  context: { params: { id: string } }
 ) {
   try {
-    const provinceId = params.id;
+    const provinceId = context.params.id;
     
     // 从数据库获取省份详情
     const provinceData = await getProvinceDetailFromDB(provinceId);
