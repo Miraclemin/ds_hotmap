@@ -19,6 +19,15 @@ const nextConfig = {
     serverComponentsExternalPackages: [],
     optimizeCss: false,
   },
+  // 确保使用SWC编译器
+  swcMinify: true,
+  // 禁用Babel
+  compiler: {
+    emotion: false,
+    reactRemoveProperties: false,
+    removeConsole: false,
+    styledComponents: false,
+  },
   // 确保输出目录设置正确
   distDir: '.next',
 };
