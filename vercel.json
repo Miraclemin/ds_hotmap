@@ -1,0 +1,11 @@
+{
+  "buildCommand": "next build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "regions": ["sin1"],
+  "env": {
+    "POSTGRES_PRISMA_URL": "env var from vercel ui",
+    "POSTGRES_URL_NON_POOLING": "env var from vercel ui"
+  }
+} 
