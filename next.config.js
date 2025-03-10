@@ -14,6 +14,11 @@ const nextConfig = {
     // 在生产构建期间忽略TypeScript错误
     ignoreBuildErrors: true,
   },
+  experimental: {
+    // 禁用部分可能导致问题的实验性功能
+    serverComponentsExternalPackages: [],
+    optimizeCss: false,
+  },
   // 确保输出目录设置正确
   distDir: '.next',
 };
