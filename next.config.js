@@ -3,16 +3,7 @@ const path = require('path');
 
 const nextConfig = {
   webpack: (config) => {
-    // 增强模块解析配置
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@': path.resolve(__dirname, './src'),
-    };
-    
-    config.module.rules.push({
-      test: /\.json$/,
-      type: 'json',
-    });
+    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
     return config;
   },
   eslint: {
