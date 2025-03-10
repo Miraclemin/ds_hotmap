@@ -14,13 +14,12 @@ const nextConfig = {
     // 在生产构建期间忽略TypeScript错误
     ignoreBuildErrors: true,
   },
+  // 将serverComponentsExternalPackages移动到顶层配置
+  serverExternalPackages: [],
   experimental: {
     // 禁用部分可能导致问题的实验性功能
-    serverComponentsExternalPackages: [],
-    optimizeCss: false,
+    optimizeCss: false
   },
-  // 确保使用SWC编译器
-  swcMinify: true,
   // 禁用Babel
   compiler: {
     emotion: false,
